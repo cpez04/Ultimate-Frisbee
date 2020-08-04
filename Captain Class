@@ -1,0 +1,26 @@
+ public class Captain extends UltimatePlayer{
+  private boolean type;
+  
+  public Captain(String f, String l, String p, boolean t){
+    super(f,l,p);
+    type = t;
+  }
+  
+  public String toString(){
+    if (type){
+      return super.toString()+
+        ("\n   Captain: offense");
+      
+    }
+    else{
+      return super.toString()+
+        ("\n   Captain: defense");
+    }
+    
+  }
+  
+  
+  
+  
+}
+  
