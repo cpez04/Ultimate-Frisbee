@@ -1,0 +1,62 @@
+import java.util.*;
+
+class UltimateTeam {
+
+
+private ArrayList<UltimatePlayer> players;
+private ArrayList<Coach> coaches;
+
+
+
+public UltimateTeam(ArrayList<UltimatePlayer> p, ArrayList<Coach> c){
+  
+this.players = p;
+this.coaches = c;
+  
+  
+}
+public String getCutters(){
+ 
+String cat = "";
+ for(UltimatePlayer c: players){
+   if(c.toString().indexOf("cutter") != -1){
+   cat += c;
+   cat += "\n";
+   }
+   }
+ 
+  return cat;
+  
+}
+
+public String getHandlers(){
+  String temp = "";
+  for(UltimatePlayer c: players){
+   if(c.toString().indexOf("handler") != -1){
+   temp += c;
+   temp += "\n";
+   }
+   }
+  return temp;
+  
+}
+
+public String toString(){
+ String temp = "COACHES\n";
+ for(Coach c: coaches){
+   temp += c;
+   temp += "\n";
+ }
+ temp += "\nPLAYERS\n";
+ for(UltimatePlayer p: players){
+   temp += p;
+   temp += "\n";
+ }
+  return (temp);
+  
+}
+
+
+  
+}
+  
